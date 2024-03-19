@@ -19,16 +19,18 @@ const Navbar = () => {
       }
       
     return (
-        <div className="container mx-auto flex">
+        <div className="container mx-auto ">
             <div onClick={() => toggle()} className="text-2xl mr-28">
             {
                 menu === true ? <RiMenu2Line></RiMenu2Line> : <IoCloseSharp />
             }
               
             </div>
+            <ul className={`md:flex md:absolute p-10 font-semibold duration-75 ${menu? 'hidden' : ''} pl-10 pb-3 bg-slate-600 text-white rounded-sm`}>
             {
-                routes.map(route => <List key={route.id} route={route}></List>)
-            }
+                routes.map(route => <List  key={route.id} route={route}></List>)
+            } 
+            </ul>
         </div>
     );
 };
