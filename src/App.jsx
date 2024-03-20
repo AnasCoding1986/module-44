@@ -1,11 +1,12 @@
 import Navbar from "./Components/Navbar/Navbar"
+import PriceOptions from "./Components/priceOptions/PriceOptions"
 
 function App() {
 
   return (
     <>
       <Navbar></Navbar>
-      <h1 className="mt-40">Vite + React</h1>
+      <PriceOptions></PriceOptions>
     </>
   )
 }
